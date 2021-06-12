@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${typeModel.difficulty}"></title>
+</head>
+<body>
+<main>
+    <h2 class="" th:each="trek:${typeModel.treks}" th:text="${trek.name}"></h2>
+</main>
+</body>
+</html>

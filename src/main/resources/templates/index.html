@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JacKr TreKr</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="headerfooterstyle.css">
+        <link rel="stylesheet" href="indexStyle.css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1 class="header__title">JacKr TreKr</h1>
+                <input class="header__menu_btn" type="checkbox" id="header__menu_btn"/>
+                <label class="header__menu_icon" for="header__menu_btn"><span class="header__nav_icon"></span></label>
+                <class class="header__nav_list"></class>
+                <ul class="header__nav_list">
+                    <li class="header__nav_listItem"><a href="/continents">Continents</a></li>
+                    <li class="header__nav_listItem"><a href="/regions">Regions</a></li>
+                    <li class="header__nav_listItem"><a href="/treks">Treks</a></li>
+                    <li class="header__nav_listItem"><a href="/types">Difficulty</a></li>
+                    <li class="header__nav_listItem"><a href="AboutUs.html">About Us</a></li>
+                </ul>
+            </header>
+            <main class="main">
+                <section class="main__section_difficulty">
+                    <h2 class="main__section_header">Difficulty:</h2>
+                    <button class="main__button_type" th:each="type:${typesModel}"><a th:href="@{'/types/' + ${type.difficulty}}" th:text="${type.difficulty}"></a>Difficulty</button>
+                </section>
+                <section class="main__section_worldMap">
+                    <h2 class="main__section_header">Continents:</h2>
+                    <button class="main__button_type" th:each="continent:${continentsModel}"><a th:href="@{'/continents/' + ${continent.location}}" th:text="${continent.location}"></a></button>
+                </section>
+            </main>
+            <footer class="footer">
+                <section class="footer__section_social">
+                    <a href="#"><img src="/images/facebook.png" alt="" class="footer__image"></a>
+                    <a href="#"><img src="/images/twitter.png" alt="" class="footer__image"></a>
+                    <a href="#"><img src="/images/instagram.png" alt="" class="footer__image"></a>
+                </section>
+                <section class="footer__section_copy">
+                    <small class="copyright">&copy JacKr Enterprises 2021</small>
+                </section>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${regionModel.location}"></title>
+</head>
+<body>
+<main>
+    <h2 class="Regions" th:each="trek:${regionModel.treks}" th:text="${trek.name}"></h2>
+</main>
+</body>
+</html>

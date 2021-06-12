@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    background-color: #bbb;
+}
+
+a {
+    color: black;
+}
+
+.header {
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.header__nav_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.header__nav_listItem a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4; /*may not want */
+    text-decoration: none;
+}
+
+.header__nav_listItem a:hover {
+    background-color: #f4f4f4;
+}
+
+.header__title {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.header__nav_list {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header__menu_icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+}
+
+.header__nav_icon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    -webkit-transition: background .2s ease-out;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header__nav_icon:before,
+.header__nav_icon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header__nav_icon:before {
+    top: 5px;
+}
+
+.header__nav_icon:after {
+    top: -5px;
+}
+
+.header__menu_btn {
+    display: none;
+}
+
+.header__menu_btn:checked ~ .header__nav_list {
+    max-height: 240px;
+}
+
+.header__menu_btn:checked ~ .header__nav_icon {
+    background: transparent;
+}
+
+.header__menu_btn:checked ~ .header__nav_icon:before {
+    transform: rotate(-45deg);
+}
+
+.header__menu_btn:checked ~ .header__nav_icon:after {
+    transform: rotate(45deg);
+}
+
+.header__menu_btn:checked ~ .header__menu_icon:not(.steps) .header__nav_icon:before,
+.header__menu_btn:checked ~ .header__menu_icon:not(.steps) .header__nav_icon:after {
+    top: 0;
+}
+
+.footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.footer__image {
+    height: auto;
+    width: 25px;
+}
+
+@media (min-width: 48em) {
+
+    .header__nav_listItem {
+        float: left;
+    }
+
+    .header__nav_listItem a {
+        padding: 20px 30px;
+    }
+
+    .header__nav_list {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header__menu_icon {
+        display: none;
+    }
+}

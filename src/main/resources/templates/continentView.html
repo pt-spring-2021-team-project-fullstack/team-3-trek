@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:region="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${continentModel.location}"></title>
+</head>
+<body>
+<main>
+    <h2 class="" th:each="region:${continentModel.regions}" th:text="${region.location}"></h2>
+</main>
+</body>
+</html>

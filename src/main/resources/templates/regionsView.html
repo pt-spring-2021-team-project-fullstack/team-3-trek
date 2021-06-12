@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Regions</title>
+</head>
+<body>
+<main>
+    <h2 th:each="region:${regionsModel}"><a th:href="@{'/regions/' + ${region.location}}" th:text="${region.location}">
+        </a></h2>
+</main>
+</body>
+</html>
