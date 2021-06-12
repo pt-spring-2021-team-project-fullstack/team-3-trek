@@ -9,13 +9,13 @@
     background: gray;
     border: 5px solid grey;
     border-radius: 25px;
-    padding: 100px;
-    margin: 100px;
+    padding: 50px;
+    margin: 50px;
     width: 10em;
 }
 
   h2{
-      margin-top: 0px;
+      padding-top: 0px;
       font-weight: 800;
   }
   
@@ -25,6 +25,7 @@
   height: 300px;
   object-fit: cover;
   border-radius: 15px;
+  max-width: 1200px;
   }
 
 
