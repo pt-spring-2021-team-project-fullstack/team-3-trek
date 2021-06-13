@@ -1,48 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 * {
-    font-family: sans-serif;
-    text-align: center;
-    line-height: 1.618em;
-  }
-
-  .container { 
-    background: gray;
-    border: 5px solid grey;
-    border-radius: 25px;
-    padding: 50px;
-    margin: 50px;
-    width: 10em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-  h2{
-      padding-top: 0px;
-      font-weight: 800;
-  }
-  
-
-  #images{
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 15px;
-  max-width: 1200px;
-  }
-
-
-  html{
-    background-image: linear-gradient(to right top, #d3dacb, #c1caaf, #b1ba92, #a4a975, #989858);
-  }
-
-
-p{
-  font-weight: bold;
-  align-content: center;
-  margin-bottom: 120px;
+html {
+  font-size: 12px;
 }
 
-.profiles{
-  height: -10em;
-  display: flex;
-  align-content: center;
+body {
+  background: url('./images/background5.png');
+  background-position: 0 1000px;
+  background-position: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
+.comtainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  font-size: 7rem;
+  font-weight: 700;
+  letter-spacing: 7px;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: black;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.imgs {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+p {
+  font-size: 3rem;
+  color:black;
+  line-height: 5rem;
+  margin-bottom: 5rem;
+
+}
+
+.button {
+  display: inline-block;
+  padding: 2.7rem 7.5rem;
+  background: #f6f6f6;
+  font-size: 3rem;
+  text-decoration: none;
+  color: #398f51;
+  border-radius: 10px;
+  transition: background 0.5s;
+}
+
+.button:hover {
+  background: #dadada;
+}
